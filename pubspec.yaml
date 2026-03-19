@@ -1,0 +1,25 @@
+name: tradplus_sdk_plus
+description: Tradplus Flutter Plugin for Android and iOS - with support for interstitial ads, rewarded ads,splash ads, native ads, offerwall and banners.
+version: 1.2.6
+homepage: https://tradplusad.com
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=2.5.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.tradplus.flutter
+        pluginClass: TradplusFlutterPlugin
+      ios:
+        pluginClass: TradplusSdkPlugin
