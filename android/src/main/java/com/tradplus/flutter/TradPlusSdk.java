@@ -169,6 +169,8 @@ public class TradPlusSdk {
                         setDefaultConfig(call, result);
                     } else if (call.method.equals("tp_setEventChannel")) {
                         setEventChannel(call, result);
+                    } else if (call.method.equals("tp_trackingAuthorizationStatus")) {
+                        result.success(-1);
                     } else {
                         Log.e("TradPlusLog", "unknown method");
                     }

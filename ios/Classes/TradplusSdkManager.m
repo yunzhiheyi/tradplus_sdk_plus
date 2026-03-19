@@ -8,6 +8,7 @@
 #import "TradplusSdkManager.h"
 #import <TradPlusAds/TradPlusAds.h>
 #import "TradplusSdkPlugin.h"
+#import <AppTrackingTransparency/AppTrackingTransparency.h>
 
 @interface TradplusSdkManager()<TradPlusAdImpressionDelegate>
 
@@ -132,8 +133,10 @@
     {
          [self setForbidNetworkIdList:call];
     }
-
-}
+    else if([@"tp_trackingAuthorizationStatus" isEqualToString:call.method])
+    {
+        [self trackingAuthorizationStatus:result];
+    }
 
 - (void) openTradPlusTool
 {
@@ -469,6 +472,16 @@
     [[MSConsentManager sharedManager] showConsentDialogFromViewController:[MsCommon getTopRootViewController] didShow:nil didDismiss:^{
         [TradplusSdkPlugin callbackWithEventName:@"tp_dialogClosed" adUnitID:nil adInfo:nil error:nil];
     }];
+}
+
+- (void)trackingAuthorizationStatus:(FlutterResult)result
+{
+    if (@available(iOS 14, *)) {
+        ATTrackingManagerAuthorizationStatus status = [ATTrackingManager trackingAuthorizationStatus];
+        result(@(status));
+    } else {
+        result(@(-1));
+    }
 }
 
 #pragma mark - TradPlusAdImpressionDelegate

@@ -186,6 +186,13 @@ class TradplusSdk {
     return await TradplusSdk.channel.invokeMethod('tp_isOpenPersonalizedAd');
   }
 
+  /// 获取 iOS App Tracking Transparency 授权状态
+  /// 返回状态码：0 = notDetermined, 1 = restricted, 2 = denied, 3 = authorized
+  /// Android 返回 -1 (不支持)
+  Future<int> trackingAuthorizationStatus() async {
+    return await TradplusSdk.channel.invokeMethod('tp_trackingAuthorizationStatus');
+  }
+
   ///调用测试工具 传入 appId
   ///集成参考
   ///iOS https://docs.tradplusad.com/docs/integration_ios/sdk_test_android/test_tool/
