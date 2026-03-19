@@ -137,6 +137,7 @@
     {
         [self trackingAuthorizationStatus:result];
     }
+}
 
 - (void) openTradPlusTool
 {
