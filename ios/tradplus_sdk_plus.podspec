@@ -3,8 +3,8 @@
 # Run `s.dependency lib lint tradplus_sdk.podspec` to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'tradplus_sdk'
-  s.version          = '1.2.5'
+  s.name             = 'tradplus_sdk_plus'
+  s.version          = '1.2.7'
   s.summary          = 'A new Flutter project.'
   s.description      = <<-DESC
 Tradplus SDK Flutter project.
