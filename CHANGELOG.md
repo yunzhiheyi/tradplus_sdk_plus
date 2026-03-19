@@ -1,3 +1,7 @@
+## 1.2.9
+
+* Fix iOS build error - add missing closing brace for `handleMethodCall` method
+
 ## 1.2.8
 
 * Fix iOS podspec name mismatch - rename from `tradplus_sdk` to `tradplus_sdk_plus`
