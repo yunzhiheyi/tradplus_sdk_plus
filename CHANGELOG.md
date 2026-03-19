@@ -1,3 +1,7 @@
+## 1.2.7
+
+* Add `trackingAuthorizationStatus` method for iOS ATT (App Tracking Transparency)
+
 ## 1.2.6
 
 This is a fixed version of tradplus_sdk, with fixes for iOS-related issues including splash callback improvements and other iOS-specific bug fixes.
