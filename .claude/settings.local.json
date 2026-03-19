@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(flutter pub:*)",
+      "Bash(PUB_HOSTED_URL=\"https://pub.dev\" flutter pub publish --force 2>&1)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(du -sh ~/Library/Caches/*)",
+      "Bash(mount)",
+      "Bash(mv ~/.pub-cache/* /Volumes/brighton_mac/Users/mac/.cache/pub-cache/)",
+      "Bash(rm -rf ~/.pub-cache)",
+      "Bash(ln -s /Volumes/brighton_mac/Users/mac/.cache/pub-cache ~/.pub-cache)",
+      "Bash(mv ~/.npm/* /Volumes/brighton_mac/Users/mac/.cache/npm/)",
+      "Bash(rm -rf ~/.npm)",
+      "Bash(ln -s /Volumes/brighton_mac/Users/mac/.cache/npm ~/.npm)",
+      "Bash(mv ~/.dartServer/* /Volumes/brighton_mac/Users/mac/.cache/dartserver/)",
+      "Bash(rm -rf ~/.dartServer)",
+      "Bash(ln -s /Volumes/brighton_mac/Users/mac/.cache/dartserver ~/.dartServer)",
+      "Bash(mv ~/.cocoapods/* /Volumes/brighton_mac/Users/mac/.cache/cocoapods/)",
+      "Bash(rm -rf ~/.cocoapods)",
+      "Bash(ln -s /Volumes/brighton_mac/Users/mac/.cache/cocoapods ~/.cocoapods)",
+      "Bash(mv ~/Library/Caches/Homebrew/* /Volumes/brighton_mac/Users/mac/.cache/homebrew/)",
+      "Bash(rm -rf ~/Library/Caches/Homebrew)",
+      "Bash(ln -s /Volumes/brighton_mac/Users/mac/.cache/homebrew ~/Library/Caches/Homebrew)",
+      "Bash(mv ~/.gradle/* /Volumes/brighton_mac/Users/mac/.cache/gradle/)",
+      "Bash(rm -rf ~/.gradle)",
+      "Bash(ln -s /Volumes/brighton_mac/Users/mac/.cache/gradle ~/.gradle)",
+      "Bash(~/.pub-cache/test_write.txt)",
+      "Bash(rm ~/.pub-cache/test_write.txt)"
+    ]
+  }
+}

@@ -1,3 +1,7 @@
+## 1.2.8
+
+* Fix iOS podspec name mismatch - rename from `tradplus_sdk` to `tradplus_sdk_plus`
+
 ## 1.2.7
 
 * Add `trackingAuthorizationStatus` method for iOS ATT (App Tracking Transparency)
