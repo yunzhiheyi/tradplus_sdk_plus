@@ -1,3 +1,7 @@
+## 1.3.0
+
+* Add `requestTrackingAuthorization` method for iOS ATT (App Tracking Transparency) authorization request
+
 ## 1.2.9
 
 * Fix iOS build error - add missing closing brace for `handleMethodCall` method

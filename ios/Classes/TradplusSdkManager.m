@@ -137,6 +137,10 @@
     {
         [self trackingAuthorizationStatus:result];
     }
+    else if([@"tp_requestTrackingAuthorization" isEqualToString:call.method])
+    {
+        [self requestTrackingAuthorization:result];
+    }
 }
 
 - (void) openTradPlusTool
@@ -480,6 +484,17 @@
     if (@available(iOS 14, *)) {
         ATTrackingManagerAuthorizationStatus status = [ATTrackingManager trackingAuthorizationStatus];
         result(@(status));
+    } else {
+        result(@(-1));
+    }
+}
+
+- (void)requestTrackingAuthorization:(FlutterResult)result
+{
+    if (@available(iOS 14, *)) {
+        [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
+            result(@(status));
+        }];
     } else {
         result(@(-1));
     }
